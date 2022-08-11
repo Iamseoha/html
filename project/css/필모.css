@@ -1,7 +1,4 @@
-@charset "utf-8";
-
-/* Web fonts------------------------------------ */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap');
 
 .filmography-profile-container {
 	position: fixed;
@@ -44,21 +41,21 @@
 
 .name-en {
 	font-size: 14px;
-	color: white;
+	color: #b9b9b9;
 	font-weight: 400;
 }
 
 .movie-count {
 	position: relative;
 	font-size: 14px;
-	color: white;
+	color: #efefef;
 }
 
 .filmography-movie-list-area {
 	position: relative;
 	margin-top: 17px;
 	padding: 0 16px 50px;
-	color: white;
+	color: #efefef;
 }
 
 @media (min-width: 480px) {
