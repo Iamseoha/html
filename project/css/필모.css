@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* Web fonts------------------------------------ */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Smooch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap%27');
 
 .filmography-profile-container {
 	position: fixed;
