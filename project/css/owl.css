@@ -6,6 +6,7 @@
 /*
  *  Owl Carousel - Core
  */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap%27%');
 .owl-carousel {
   display: none;
   width: 100%;
