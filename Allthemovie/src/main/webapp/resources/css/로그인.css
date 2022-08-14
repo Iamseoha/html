@@ -1,0 +1,145 @@
+
+.login {
+	text-align: center;
+	padding-top: 150px;
+	overflow: auto;
+}
+
+.login-box {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	text-align: left;
+	width: 475px;
+	height: auto;
+	min-height: 540px;
+	border-radius: 6px;
+	overflow: auto;
+	background: rgb(65, 65, 65);
+	padding: 32px 0px 16px;
+}
+
+.login-title {
+	font-size: 25px;
+	letter-spacing: -0.5px;
+	line-height: 22px;
+	font-weight: 700;
+	text-align: center;
+	margin: 24px 0px 20px;
+}
+
+.login-inner {
+	margin: 0px 20px;
+}
+
+.login-wrap {
+	padding: 4px 0px;
+}
+
+.email-box {
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	background: rgb(255, 255, 255);
+	box-sizing: border-box;
+	width: 100%;
+	height: 44px;
+	padding: 0px 12px;
+	border-radius: 6px;
+}
+
+.email-text {
+	background: transparent;
+	font-weight: 400;
+	font-size: 16px;
+	letter-spacing: -0.6px;
+	line-height: 21px;
+	width: 100%;
+	padding: 0px;
+	border: 0px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.login-btn {
+	padding: 0px;
+	border: none;
+	cursor: pointer;
+	background: #d8aca7;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	font-size: 17px;
+	font-weight: 400;
+	letter-spacing: -0.7px;
+	line-height: 22px;
+	width: 100%;
+	height: 44px;
+	border-radius: 6px;
+	margin: 16px 0px 0px;
+}
+
+.login-bottom {
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: -0.5px;
+	line-height: 20px;
+	text-align: center;
+	margin: 20px 0px 14px;
+}
+
+.bottom-btn {
+	background: none;
+	padding: 0px;
+	border: none;
+	margin: 0px;
+	cursor: pointer;
+	color: #d8aca7;
+}
+
+.join {
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: -0.5px;
+	line-height: 20px;
+	color: rgb(185, 185, 185);
+	text-align: center;
+}
+
+.login-border {
+	position: relative;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	height: 1.5em;
+	border: 0px;
+	outline: 0px;
+	margin: 24px 0px;
+}
+
+.btn--kakao {
+	width: 100%;
+	border: 0;
+	background-color: #fee500;
+	font-size: 1.1rem;
+	color: #2e2e2e;
+	line-height: 2.4rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+.reset-pass {
+	color: rgb(255, 255, 255);
+	font-size: 17px;
+	font-weight: 700;
+	letter-spacing: -0.5px;
+	line-height: 22px;
+	margin: 62px 0px 12px;
+}
+
+.reset-in {
+	color: rgb(197, 197, 197);
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: -0.5px;
+	line-height: 20px;
+	margin: 10px 0px;
+}

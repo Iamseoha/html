@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap');
+
+.filmography-profile-container {
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+	max-width: 700px;
+}
+
+.filmography-profile-area {
+	position: relative;
+	padding: 60px 16px 12px;
+	background: #262626;
+}
+
+.filmography-profile-area .profile-image-wrap {
+	position: relative;
+	width: 72px;
+	height: 72px;
+	margin: 0 auto;
+}
+
+.profile-image {
+	width: 72px;
+	height: 72px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.profile-name-wrap {
+	position: relative;
+	text-align: center;
+	margin-top: 4px;
+}
+
+.profile-name-wrap h2.name-kr {
+	font-size: 20px;
+	color: #efefef;
+	font-weight: 700;
+}
+
+.name-en {
+	font-size: 14px;
+	color: #b9b9b9;
+	font-weight: 400;
+}
+
+.movie-count {
+	position: relative;
+	font-size: 14px;
+	color: #efefef;
+}
+
+.filmography-movie-list-area {
+	position: relative;
+	margin-top: 17px;
+	padding: 0 16px 50px;
+	color: #efefef;
+}
+
+@media (min-width: 480px) {
+	.movie-list-item-wrap {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 600px) {
+	.movie-list-item-wrap {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}
+
+.movie-list-item-wrap {
+	position: relative;
+	display: grid;
+	grid-gap: 16px;
+	grid-row-gap: 16px;
+	justify-items: center;
+}
+
+.MovieItem.grid,
+.MovieItem.grid .poster {
+	width: 100%;
+	height: 100%;
+}
+
+.MovieItem {
+	border-radius: 6px;
+	background: #363636;
+	position: relative;
+	display: inline-block;
+	font-size: 0;
+}
+
+.MovieItem.grid .poster img {
+	width: 100%;
+	min-height: 222px;
+}
+
+.MovieItem .info .title {
+	font-size: 14px;
+	line-height: 16px;
+	vertical-align: top;
+	letter-spacing: -0.1px;
+	color: #efefef;
+	text-align: center;
+	margin-top: 8px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding: 0 8px;
+}
+
+.MovieItem .info .rating {
+	padding: 0 0 0 8px;
+	font-size: 0;
+	height: 36px;
+	position: relative;
+}
+
+.MovieItem .info .rating .button-action-wish {
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	vertical-align: middle;
+}
