@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap');
+
+body {
+	background-color: #262626;
+	font-family: RobotoInCjk, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Malgun Gothic', sans-serif !important;
+}
+
+.feather {
+	width: 16px;
+	height: 16px;
+	vertical-align: text-bottom;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+	position: fixed;
+	top: 0;
+	/* rtl:raw:
+  right: 0;
+  */
+	bottom: 0;
+	/* rtl:remove */
+	left: 0;
+	z-index: 100; /* Behind the navbar */
+	padding: 88px 0 0; /* Height of navbar */
+	background-color: #262626 !important;
+}
+
+@media (max-width: 767.98px) {
+	.sidebar {
+		top: 5rem;
+	}
+}
+
+.sidebar-sticky {
+	position: relative;
+	top: 0;
+	height: calc(100vh - 48px);
+	padding-top: 0.5rem;
+	overflow-x: hidden;
+	overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.click {
+	color: white !important;
+}
+
+.sidebar .nav-link {
+	font-weight: 600;
+	color: rgb(134, 128, 128);
+	font-size: 20px;
+}
+
+.nav-link:hover {
+	color: #ffffff;
+}
+
+.sidebar-heading {
+	font-size: 0.75rem;
+	text-transform: uppercase;
+}
+
+/*
+ * Navbar
+ */
+
+.navbar-brand {
+	padding-top: 20px;
+	margin-left: 20px;
+	font-size: 35px;
+	background-color: #262626;
+	height: 90px !important;
+	width: 330px !important;
+	font-weight: 900;
+}
+
+.navbar .navbar-toggler {
+	top: 0.25rem;
+	right: 1rem;
+}
+
+.navbar .form-control {
+	padding: 0.75rem 1rem;
+	border-width: 0;
+	border-radius: 0;
+}
+
+.form-control-dark {
+	color: #fff;
+	background-color: #363636;
+	border-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-control-dark:focus {
+	border-color: transparent;
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+table {
+	height: 300px !important;
+	font-size: 15px;
+}
+
+thead,
+tbody {
+	background-color: #ffffff;
+	color: #262626;
+	text-align: center;
+}
+
+.btn {
+	background-color: #4b4b4b;
+	border: none;
+	font-size: 15px;
+}
+
+.btn:hover {
+	background-color: white;
+	color: black;
+}
+
+.btn:focus,
+.btn:active {
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+.page-link {
+	background-color: #262626 !important;
+	border: none;
+	color: rgb(187, 187, 187);
+	font-size: 20px;
+}
+
+.page-link:hover {
+	color: #ffffff !important;
+}
+
+.page-link:focus,
+.page-link:active {
+	outline: none !important;
+	box-shadow: none !important;
+}
