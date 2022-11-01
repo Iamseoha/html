@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="generator" content="Rhymix">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="" />
+    <meta name="csrf-token" content="" />
+    <!-- TITLE -->
+    <title>무비로그</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/rhymix.less.min.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/layout_pc.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@1.2.2/dist/web/static/pretendard-dynamic-subset.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="/css/b_gray.css" />
+    <link rel="stylesheet" href="/css/b_grey_pc.css" />
+    <link rel="stylesheet" href="/css/c_redBlack.css" />
+    <link rel="stylesheet" href="/css/c_redBlack_pc.css" />
+    <link rel="stylesheet" href="/css/member.css">
+    <link rel="stylesheet" href="/css/member_pc.css">
+    <!-- JS -->
+    <script src="/js/jquery-2.2.4.min.js"></script>
+    <script src="/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="/js/layout.js"></script>
+    <script src="/js/jquery.scrollbar.min.js"></script>
+    <script src="/js/jquery.selectbox.min.js"></script>
+    <script src="/js/layout_pc.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <script src="/js/swiper.min.js"></script>
+    <script src="/js/widget_pc.js"></script>
+    <script src="/js/member.js"></script>
+
+    <style>
+        #popup_menu_area {
+            outline: none !important;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+        }
+    </style>
+    <style>
+        body,
+        table,
+        input,
+        button,
+        .ink_wrap .xe_content,
+        .text_en {
+            font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            font-weight: 400;
+        }
+
+        #popup_menu_area {
+            padding: 12px 15px 5px;
+        }
+
+        #popup_menu_area li {
+            margin-bottom: 7px;
+        }
+
+        #popup_menu_area a {
+            padding: 0 !important;
+            color: #999;
+            transition-property: color;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in;
+        }
+
+        #popup_menu_area a:hover {
+            color: #333;
+            background-color: transparent !important;
+        }
+
+        .ink_container,
+        .ink_banner_top,
+        .ink_footer {
+            width: 1200px;
+        }
+
+        .ink_footer_wrap {
+            min-width: 1200px;
+        }
+
+        .nav_wrap.fixed {
+            width: 1200px;
+            margin-left: -600px;
+        }
+
+        .ink_content {
+            width: 930px;
+        }
+
+        .ink_sidebar.right_sidebar {
+            width: 220px;
+        }
+
+        .ink_sidebar.left_sidebar {
+            width: 250px;
+        }
+
+        .ink_sidebar.right_sidebar::after {
+            right: 245px
+        }
+
+        .ink_sidebar.left_sidebar::after {
+            left: 275px;
+        }
+
+        .containerB .ink_content {
+            width: 905px;
+        }
+
+        .containerB.sidebar_typeN .ink_content {
+            width: 100%;
+        }
+
+        .containerB .ink_sidebar.right_sidebar {
+            width: 195px;
+        }
+
+        .containerB .ink_sidebar.left_sidebar {
+            width: 225px;
+        }
+
+        .normal_mode .ink_gnb .menu_1depth {
+            line-height: 70px;
+        }
+
+        .nav_wrap.view_mode,
+        .normal_mode .gnb_space .menu_1depth {
+            height: 70px;
+        }
+
+        .ink_header {
+            margin-top: 25px;
+        }
+
+        .nav_wrap.color_nav,
+        .view_mode.color_nav .ink_gnb,
+        .normal_mode.color_nav .menu_1depth,
+        .nav_wrap .mymenu_title,
+        .nav_wrap.color_nav.fixed {
+            background-color: #88a593 !important;
+        }
+
+        .nav_wrap.color_nav .menu_1depth,
+        .color_nav.view_mode a,
+        .nav_wrap.color_nav .nav_buttons button {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .nav_wrap.color_nav .menu_1depth:hover,
+        .color_nav.view_mode a:hover,
+        .nav_wrap.color_nav .nav_buttons button:hover,
+        .nav_wrap.color_nav .active>a.menu_1depth {
+            color: #FFF;
+        }
+
+        .view_mode.color_nav .ink_gnb>ul>li {
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .view_mode.color_nav .ink_gnb .menu_1depth {
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .ink_header .logo,
+        .ink_header .header_side {
+            height: 72px;
+        }
+
+        .header_typeB3 {
+            padding-top: -18px;
+        }
+
+        body {
+            background-color: #e6e6e6;
+        }
+
+        .ink_sidebar.left_sidebar::after,
+        .ink_sidebar.right_sidebar::after {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+    </style>
+    <style>
+    </style>
+    <style>
+    </style>
+    <style>
+        .w_list .title_link,
+        .ww2.first_item .title_link {
+            font-size: 14px !important;
+        }
+
+        .ww2.list_item .title_link {
+            font-size: 12px !important;
+        }
+    </style>
+    <style>
+        .w_list .title_link,
+        .ww2.first_item .title_link {
+            font-size: 14px !important;
+        }
+
+        .ww2.list_item .title_link {
+            font-size: 12px !important;
+        }
+    </style>
+    <style>
+    </style>
+    <style>
+    </style>
+    <style>
+    </style>
+    <style>
+        .wg .list_unit2 {
+            margin-bottom: -20px;
+        }
+
+        .wg .list_unit2>li {
+            width: calc(33.33% - 13.33px);
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .wg .list_unit2>li:nth-child(3n) {
+            margin-right: 0;
+        }
+
+        .ink_sidebar .list_unit2 .list_vote {
+            right: 10px;
+            top: 10px;
+            padding: 3px 8px;
+            font-size: 11px;
+        }
+
+        .ink_sidebar .list_unit2 .list_vote i {
+            font-size: 11px;
+        }
+
+        .ink_sidebar .list_unit2 .title_link {
+            font-size: 13px;
+        }
+
+        .ink_sidebar .list_unit2 .list_info,
+        .ink_sidebar .list_unit2 .list_summary {
+            font-size: 12px;
+        }
+
+        .ink_sidebar .list_unit2 .list_info>span {
+            margin-right: 10px;
+        }
+
+        .ink_sidebar .list_unit2 .hided_info .list_body {
+            padding: 0 10px 10px;
+        }
+
+        .ink_sidebar .no_box .list_unit2 .list_body {
+            padding: 10px;
+        }
+
+        .ink_sidebar .list_unit2 .big_rank {
+            padding-left: 0;
+            padding-top: 2px;
+            font-size: 11px;
+        }
+
+        .ink_sidebar .list_unit2 .big_rank::after {
+            border-width: 15px;
+        }
+
+        .wg .list_unit2 .list_thumb {
+            padding-bottom: 140%;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" />
+</head>
+<!-- BODY START -->
+
+<body>
+    <!-- PC -->
+
+    <div class="ink_wrap lightmode">
+        <div id="container" class="ink_container header_typeB3 containerN">
+            <div id="header" class="ink_header has_navbox" role="banner">
+                <div id="gnb" class="nav_wrap normal_mode color_nav">
+                    <div class="logo">
+                        <div>
+                            <a href="/main.html" rel="home"><img src="/logo.png"
+                                    style="height: 58px; margin-top: 5px;" /></a>
+                        </div>
+                    </div>
+                    <nav class="ink_gnb" role="navigation">
+                        <ul>
+                            <li class="gnb_space"><span class="menu_1depth"></span></li>
+                            <li>
+                                <a class="menu_1depth" href="/board_hot.html">인기글 </a>
+                            </li>
+                            <li>
+                                <a class="menu_1depth" href="/board_movietalk.html">영화수다 </a>
+                            </li>
+                            <li>
+                                <a class="menu_1depth" href="/board_doran.html">도란도란</a>
+                            </li>
+                            <li>
+                                <a class="menu_1depth" href="/board_goods.html">굿즈 </a>
+                            </li>
+
+                            <li>
+                                <a class="menu_1depth" href="/board_nanum.html">나눔/교환 </a>
+                            </li>
+
+                            <li>
+                                <a class="menu_1depth" href="/board_event.html">이벤트 </a>
+
+                            </li>
+
+                            <li>
+                                <a class="menu_1depth" href="/board_qna.html">문의/건의 </a>
+                            </li>
+
+                            <li>
+                                <a class="menu_1depth" href="/board_notice.html">공지 </a>
+                            </li>
+
+                            <li class="gnb_space"><span class="menu_1depth"></span></li>
+                        </ul>
+                    </nav>
+
+                    <div class="nav_buttons font_grey1 closed">
+                        <form class="globalsearch" action="#" method="post"><input type="hidden" name="error_return_url"
+                                value="/" /><input type="hidden" name="vid" value="" /><input type="hidden" name="mid"
+                                value="home" /><input type="hidden" name="act" value="IS" /><input type="hidden"
+                                name="search_target" value="title_content" /><button class="bt_globalsearch"
+                                type="button"><i class="fas fa-search" title="search"></i></button><input class="ii ii2"
+                                value="" name="is_keyword" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ink_wrapper" class="ink_wrapper clearfix">
+                <aside class="ink_sidebar right_sidebar">
+                    <div class="ink_login is_logged round15">
+                        <span class="inkpf round"></span>
+                        <span class="logged_name"><a href="/index/member_info?member_srl=388955">sdfiej</a></span>
+                        <div class="bt_area">
+                            <a href="/member.html">회원 메뉴</a>
+                            <a href="/main.html">로그아웃</a>
+                        </div>
+                    </div>
+                </aside>
+
+                <div id="content" class="ink_content" role="main">
+
+                    <div class="ink_member">
+                        <header class="mb_header">
+                            <h1>
+                                회원 페이지 <span class="ink_bubble_wrap"><a href="/main.html" class="has_bubble"><i
+                                            class="fas fa-angle-left" title="돌아가기"></i></a><span
+                                        class="ink_bubble">돌아가기</span></span>
+                            </h1>
+                        </header>
+
+                        <div class="mb_set clearfix">
+                            <div class="mb_profile">
+                                <div class="inkpf round"></div>
+                                <div class="mb_nickname">
+                                    <a>sdfiej</a>
+                                </div>
+                            </div>
+
+                            <div class="mb_info_menu">
+                                <ul>
+                                    <li><a href="/member_pass_change.html">비밀번호 변경</a></li>
+                                    <li><a href="/member_edit.html">회원정보 변경</a></li>
+                                    <li><a href="/member_leave.html">탈퇴</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mb_content mb_info">
+                            <div class="mb_info_tab is_rx">
+                                <ul>
+                                    <li><a href="/member.html">회원 정보</a></li>
+                                    <li class="active"><a href="/member_write.html">작성 글</a></li>
+                                    <li><a href="/member_reply.html">작성 댓글</a></li>
+                                </ul>
+                            </div>
+                            <ul>
+                            </ul>
+                            <div class="no_list">등록된 글이 없습니다.</div>
+                        </div>
+                        <div class="paging text_en font_grey1">
+                            <span class="bt_page"><a class="bt_prev"
+                                    href="/index.php?act=dispMemberOwnDocument&amp;mid=home&amp;page=1" title="prev"><i
+                                        class="fas fa-angle-left"></i></a></span>
+                            <div class="page_num_wrap">
+                                <span class="bt_page"><a class="page_num active">1</a></span>
+                            </div>
+                            <span class="bt_page"><a class="bt_prev bt_next"
+                                    href="/index.php?act=dispMemberOwnDocument&amp;mid=home&amp;page=1" title="next"><i
+                                        class="fas fa-angle-right"></i></a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ink_footer_wrap">
+            <footer class="ink_footer">
+                <div class="logo_bottom">
+                    <a href="#" rel="home">
+                        <img src="/logo.png" style="height: 70px;" alt="무비로그" /></a>
+                </div>
+
+                <div class="footer_content">
+                    <div class="footer_1st footer_table">
+                        <div class="ink_copyright text_en footer_cell">Copyright©
+                            <a href="/main.html">무비로그</a> All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <button class="ink_bt_top"><i class="fas fa-angle-up"></i></button>
+
+        <div id="ink_dummy" class="ink_dummy"></div>
+
+        <!-- BODY JS -->
+        <script src="/js/autolink.js"></script>
+
+</body>
+
+</html>

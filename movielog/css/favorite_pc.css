@@ -1,0 +1,56 @@
+charset "utf-8";
+
+.pr_scut,
+.pr_drag_handle	{display: inline-block; margin-right: 8px; width: 18px; height: 18px; border-radius: 3px; text-align: center; font: 11px/18px 'Montserrat', sans-serif;}
+.pr_drag_handle	{cursor: move;}
+
+.mymenu_list	{}
+.mymenu_list h3	{position: relative;}
+.mymenu_list h3 .ink_bubble_wrap	{position: absolute; right: 10px; top: 13px;}
+.mymenu_list .add_menu	{display: inline-block; height: 20px; line-height: 22px; padding: 0 5px;}
+
+.ink_fav_wrap	{display: inline-block; vertical-align: top;}
+.ink_fav_wrap .xe-widget-wrapper	{overflow: visible !important;}
+.nav_wrap .mymenu_list	{position: relative;}
+.nav_wrap .mymenu_title	{padding: 10px; position: relative; z-index: 11;}
+.nav_wrap .mymenu_title>div	{height: 30px; line-height: 30px; padding: 0 55px 0 20px; border-radius: 15px; font-size: 14px; position: relative;}
+.nav_wrap .mymenu_title .ink_bubble_wrap	{top: 1px;}
+.nav_wrap .mymenu_list ul	{display: none; position: absolute; left: 0; top: 40%; min-width: 100%; padding: 10px 15px; box-sizing: border-box; border-radius: 0 0 15px 15px; box-shadow: 0 10px 10px rgba(0,0,0,0.1); white-space: nowrap; font-size: 13px; opacity: 0; transition-property: top, opacity; transition-duration: 0.5s;  z-index: 10;}
+.nav_wrap .mymenu_list ul.active	{top: calc(100% - 5px); opacity: 1;}
+.nav_wrap .mymenu_list li	{padding: 10px 0;}
+.nav_wrap .mymenu_list li:last-child	{border-bottom: none;}
+.nav_wrap .mymenu_list li.use_scut	{padding: 5px 0; border-bottom: none;}
+
+.nav_wrap.color_nav .mymenu_title>div	{background-color: rgba(255,255,255,0.1);}
+.color_nav.view_mode .mymenu_list ul	{background-color: rgba(255,255,255,0.1) !important;}
+.darkmode .nav_wrap.color_nav .mymenu_title>div	{background-color: rgba(0,0,0,0.2);}
+.darkmode .nav_wrap.view_mode .mymenu_list ul	{background-color: rgba(0,0,0,0.2) !important;}
+
+.open_mode .mymenu_list	{padding-top: 0; margin-top: -5px; width: 100%;}
+
+.view_mode .mymenu_title,
+.open_mode .mymenu_title	{margin-bottom: 10px;}
+.view_mode .mymenu_list ul,
+.open_mode .mymenu_list ul	{display: block !important; position: static; border-radius: 10px; margin: 0 15px; min-width: calc(100% - 30px); box-shadow: none; opacity: 1;}
+.view_mode .mymenu_list ul	{margin-bottom: 15px;}
+
+.ink_sidebar .mymenu_edit	{display: none; position: relative;}
+.ink_sidebar .mymenu_edit .bt_area	{position: absolute; right: 10px; top: 13px;}
+.ink_sidebar .mymenu_edit .bt_area button	{height: 20px; line-height: 22px; padding: 0 5px;}
+.mymenu_edit .ui-sortable>li	{position: relative;}
+.pr_item_del,
+.pr_item_add	{display: inline-block; position: absolute; right: 0; top: 50%; width: 18px; height: 18px; line-height: 20px; margin-top: -9px; border-radius: 3px; text-align: center; font-size: 11px; cursor: pointer; transition-property: color; transition-duration: 0.2s;}
+
+.ink_message.mymenu_edit>div	{width: 300px;}
+.ink_message.mymenu_edit .inner	{padding: 10px 15px;}
+.ink_message.mymenu_edit .inner li	{padding: 5px 0;}
+
+.mymenu_node>div	{width: 300px;}
+.mymenu_node .node_list	{padding: 11px 15px; line-height: 160%;}
+.mymenu_node .node_list>li>.pr_item_select	{font-weight: bold;}
+.mymenu_node .node_list>li>ul	{padding-left: 26px;}
+.mymenu_node .fa-folder,
+.mymenu_node .fa-folder-open	{margin-right: 3px; font-size: 16px;}
+.mymenu_node .pr_item_select	{display: inline-block; padding: 4px 0; cursor: pointer;}
+.mymenu_node .pr_item_select:hover .selected_icon	{opacity: 1;}
+.mymenu_node .selected_icon	{opacity: 0; transition-property: opacity; transition-duration: 0.2s; margin-left: 3px;}

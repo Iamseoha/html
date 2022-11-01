@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="generator" content="Rhymix">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="" />
+	<meta name="csrf-token" content="bBkbaUsAjJHTaxon" />
+	<!-- TITLE -->
+	<title>무비로그</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/rhymix.less.min.css" />
+	<link rel="stylesheet" href="/css/layout.css" />
+	<link rel="stylesheet" href="/css/layout_pc.css" />
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@1.2.2/dist/web/static/pretendard-dynamic-subset.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" />
+	<link rel="stylesheet" href="/css/board.css" />
+	<link rel="stylesheet" href="/css/board_pc .css" />
+	<link rel="stylesheet" href="/css/content.css" />
+	<link rel="stylesheet" href="/css/default-skin.css" />
+	<link rel="stylesheet" href="/css/b_gray.css" />
+	<link rel="stylesheet" href="/css/b_grey_pc.css" />
+	<link rel="stylesheet" href="/css/c_redBlack.css" />
+	<link rel="stylesheet" href="/css/c_redBlack_pc.css" />
+	<!-- JS -->
+	<script src="/js/jquery-2.2.4.min.js"></script>
+	<script src="/js/rhymix.min.js"></script>
+	<script src="/js/board.js"></script>
+	<script src="/js/skin_board.js"></script>
+	<script src="/js/skin_board_pc.js"></script>
+	<script src="/js/layout.js"></script>
+	<script src="/js/jquery.scrollbar.min.js"></script>
+	<script src="/js/jquery.selectbox.min.js"></script>
+	<script src="/js/layout_pc.js"></script>
+	<script src="/js/jquery.cookie.js"></script>
+	<script src="/js/swiper.min.js"></script>
+
+	<style>
+		#popup_menu_area {
+			outline: none !important;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+		}
+	</style>
+	<style>
+		body,
+		table,
+		input,
+		button,
+		.ink_wrap .xe_content,
+		.text_en {
+			font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+			font-weight: 400;
+		}
+
+		#popup_menu_area {
+			padding: 12px 15px 5px;
+		}
+
+		#popup_menu_area li {
+			margin-bottom: 7px;
+		}
+
+		#popup_menu_area a {
+			padding: 0 !important;
+			color: #999;
+			transition-property: color;
+			transition-duration: 0.2s;
+			transition-timing-function: ease-in;
+		}
+
+		#popup_menu_area a:hover {
+			color: #333;
+			background-color: transparent !important;
+		}
+
+		.ink_container,
+		.ink_banner_top,
+		.ink_footer {
+			width: 1200px;
+		}
+
+		.ink_footer_wrap {
+			min-width: 1200px;
+		}
+
+		.nav_wrap.fixed {
+			width: 1200px;
+			margin-left: -600px;
+		}
+
+		.ink_content {
+			width: 930px;
+		}
+
+		.ink_sidebar.right_sidebar {
+			width: 220px;
+		}
+
+		.ink_sidebar.left_sidebar {
+			width: 250px;
+		}
+
+		.ink_sidebar.right_sidebar::after {
+			right: 245px
+		}
+
+		.ink_sidebar.left_sidebar::after {
+			left: 275px;
+		}
+
+		.containerB .ink_content {
+			width: 905px;
+		}
+
+		.containerB.sidebar_typeN .ink_content {
+			width: 100%;
+		}
+
+		.containerB .ink_sidebar.right_sidebar {
+			width: 195px;
+		}
+
+		.containerB .ink_sidebar.left_sidebar {
+			width: 225px;
+		}
+
+		.normal_mode .ink_gnb .menu_1depth {
+			line-height: 70px;
+		}
+
+		.nav_wrap.view_mode,
+		.normal_mode .gnb_space .menu_1depth {
+			height: 70px;
+		}
+
+		.ink_header {
+			margin-top: 25px;
+		}
+
+		.nav_wrap.color_nav,
+		.view_mode.color_nav .ink_gnb,
+		.normal_mode.color_nav .menu_1depth,
+		.nav_wrap .mymenu_title,
+		.nav_wrap.color_nav.fixed {
+			background-color: #88a593 !important;
+		}
+
+		.nav_wrap.color_nav .menu_1depth,
+		.color_nav.view_mode a,
+		.nav_wrap.color_nav .nav_buttons button {
+			color: rgba(255, 255, 255, 0.7);
+		}
+
+		.nav_wrap.color_nav .menu_1depth:hover,
+		.color_nav.view_mode a:hover,
+		.nav_wrap.color_nav .nav_buttons button:hover,
+		.nav_wrap.color_nav .active>a.menu_1depth {
+			color: #FFF;
+		}
+
+		.view_mode.color_nav .ink_gnb>ul>li {
+			border-color: rgba(255, 255, 255, 0.3);
+		}
+
+		.view_mode.color_nav .ink_gnb .menu_1depth {
+			border-color: rgba(255, 255, 255, 0.5);
+		}
+
+		.ink_header .logo,
+		.ink_header .header_side {
+			height: 72px;
+		}
+
+		.header_typeB3 {
+			padding-top: -18px;
+		}
+
+		body {
+			background-color: #e6e6e6;
+		}
+
+		.ink_sidebar.left_sidebar::after,
+		.ink_sidebar.right_sidebar::after {
+			background-color: rgba(0, 0, 0, 0.05);
+		}
+	</style>
+	<style>
+		.atc_body .xe_content {
+			padding: 30px 40px 35px 40px;
+		}
+
+		.ldd>ul>li,
+		.ldn td {
+			padding-top: 14px;
+			padding-bottom: 14px;
+		}
+
+		.list_wrap .title_link,
+		.ldf header h1 {
+			font-size: 13px;
+			font-size: 15px;
+		}
+
+		.ldn .list_author {
+			font-size: 13px;
+			font-size: 13px;
+		}
+	</style>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" />
+</head>
+<!-- BODY START -->
+
+<body>
+	<div class="ink_wrap lightmode">
+		<div id="container" class="ink_container header_typeB3 containerN">
+			<div id="header" class="ink_header has_navbox" role="banner">
+				<div id="gnb" class="nav_wrap normal_mode color_nav">
+					<div class="logo">
+						<div>
+							<a href="/main.html" rel="home"><img src="/logo.png"
+									style="height: 58px; margin-top: 5px;" /></a>
+						</div>
+					</div>
+					<nav class="ink_gnb" role="navigation">
+						<ul>
+							<li class="gnb_space"><span class="menu_1depth"></span></li>
+							<li>
+								<a class="menu_1depth" href="/board_hot.html">인기글 </a>
+							</li>
+							<li>
+								<a class="menu_1depth" href="/board_movietalk.html">영화수다 </a>
+							</li>
+							<li>
+								<a class="menu_1depth" href="/board_doran.html">도란도란</a>
+							</li>
+
+
+							<li>
+								<a class="menu_1depth" href="/board_goods.html">굿즈 </a>
+							</li>
+
+							<li>
+								<a class="menu_1depth" href="/board_nanum.html">나눔/교환 </a>
+							</li>
+
+							<li>
+								<a class="menu_1depth" href="/board_event.html">이벤트 </a>
+
+							</li>
+
+							<li>
+								<a class="menu_1depth" href="/board_qna.html">문의/건의 </a>
+							</li>
+
+							<li>
+								<a class="menu_1depth" href="/board_notice.html">공지 </a>
+							</li>
+
+							<li class="gnb_space"><span class="menu_1depth"></span></li>
+						</ul>
+					</nav>
+
+					<div class="nav_buttons font_grey1 closed">
+						<form class="globalsearch" action="#" method="post"><input type="hidden" name="error_return_url"
+								value="/movietalk/88833908?category=78887301" /><input type="hidden" name="vid"
+								value="" /><input type="hidden" name="mid" value="movietalk" /><input type="hidden"
+								name="act" value="IS" /><input type="hidden" name="search_target"
+								value="title_content" /><button class="bt_globalsearch" type="button"><i
+									class="fas fa-search" title="search"></i></button><input class="ii ii2" value=""
+								name="is_keyword" /></form>
+					</div>
+				</div>
+			</div>
+			<div id="ink_wrapper" class="ink_wrapper clearfix">
+				<aside class="ink_sidebar right_sidebar">
+					<div class="ink_login is_unlogged bt_half">
+						<a href="javascript:void(0)" class="ib ib_color bt_login"
+							onclick="inkPop('ink_login2')">로그인</a><a href="/join.html"
+							class="ib ib_mono3 bt_signup">회원가입</a>
+					</div>
+				</aside>
+				<div id="content" class="ink_content" role="main">
+
+					<section class="ink_board guest_mode">
+						<div class="bd_header">
+							<h2 class="bd_title">
+								<i class="far fa-list-alt big-icon"></i>
+								<a href="/movietalk">영화수다</a>
+								<i class="fas fa-angle-right"></i>
+								<a class="category_link" href="/movietalk/category/78887301">스크린X&amp;4DX</a>
+							</h2>
+						</div>
+						<article class="ink_atc round20 has_list">
+							<div class="list_buttons">
+								<div>
+									<ul>
+										<li>
+											<a class="has_bubble" href="javascript:void(0);"
+												onclick="switchMode('dark')"><i class="fas fa-moon"></i></a><span
+												class="ink_bubble bubble_left">다크모드</span>
+										</li>
+										<li><a class="has_bubble" href="/movietalk/category/78887301"><i
+													class="fas fa-arrow-left"></i></a><span
+												class="ink_bubble bubble_left">목록</span></li>
+										<li class="bt_bottom"><a class="has_bubble" href="javascript:void(0);"><i
+													class="fas fa-arrow-down"></i></a><span
+												class="ink_bubble bubble_left">아래로</span></li>
+										<li class="bt_top"><a class="has_bubble" href="javascript:void(0);"><i
+													class="fas fa-arrow-up"></i></a><span
+												class="ink_bubble bubble_left">위로</span></li>
+									</ul>
+									<ul>
+										<li><a class="has_bubble" href="/write.html"><i class="fas fa-pen"></i></a><span
+												class="ink_bubble bubble_left">쓰기</span></li>
+										<li><a class="has_bubble" href="javascript:void(0)"
+												onclick="inkPop('list_search')"><i class="fas fa-search"></i></a><span
+												class="ink_bubble bubble_left">검색</span></li>
+									</ul>
+								</div>
+							</div>
+							<header class="atc_header">
+								<h1>
+									<a href="#" class="atc_title">결국 제 친구를 제 톰캣에
+										가둬버렸습니다</a>
+								</h1>
+								<div class="atc_info clearfix">
+									<div class="atc_ctrl">
+										<a href="/write_edit.html">수정</a>
+										<a href="javascript:void(0);" onclick="inkPop('atc_delete')">삭제</a>
+									</div>
+									<span class="atc_nickname">
+										<span class="inkpf color round small"><img class="inkpf_img"
+												src="//img.extmovie.com/files/member_extra_info/profile_image/819/382/081/81382819.jpg?20220625050140"
+												alt="Miles" /></span> <a href="#popup_menu_area" class="member_81382819"
+											onclick="return false">Miles</a> </span>
+									<span class="text_en atc_date font_grey1"><time
+											datetime="2022-08-13T11:35:32+09:00">2022.08.13. 11:35</time></span>
+									<div class="atc_info_right text_en font_grey1">
+										<span class="count_read"><i class="fas fa-eye" title="조회 수"></i> 1740</span>
+										<span class="count_vote pt_col"><i class="fas fa-heart" title="추천 수"></i>
+											12</span> <span class="count_cmt pt_col2"><i class="fas fa-comment-dots"
+												tilte="댓글"></i> 8</span>
+
+									</div>
+								</div>
+							</header>
+							<div class="atc_body">
+
+
+								<!--BeforeDocument(88833908,81382819)-->
+								<div class="document_88833908_81382819 rhymix_content xe_content">
+									<p>왕복 4시간 거리고 비싸진 티켓값 부담스러워할까봐 제가 티켓 값 내주기로 했습니다.</p>
+
+									<p> </p>
+
+									<p>전 이로써 15회차를 넘기겠네요.</p>
+
+									<p> </p>
+
+									<p>탑건 풀코스(?)로 갑니다..</p>
+
+									<p> </p>
+
+									<p>인생에 한번 있을 매버릭과의 비행을 위해 톰캣에 태워야겠습니다.</p>
+
+									<p> </p>
+
+									<p>친구 잘 둔거니 만나서 밥 안 사더라도 절 해달라했습니다 ㅋㅋ</p>
+
+									<p> </p>
+
+									<p>이미 돌비로 3번 본 친구인데, 그냥 따지지 말고 당장 오라고 으름장 놓아뒀어요.</p>
+
+									<p> </p>
+
+									<p> </p>
+
+									<p><img src="//img.extmovie.com/files/attach/images/135/908/833/088/c93a837c122a039bae8f2bbf1344933d.jpg"
+											alt="Screenshot_20220813-113037_CGV.jpg" style="" /></p>
+
+									<p><img src="//img.extmovie.com/files/attach/images/135/908/833/088/90955e3fce772ac83c4477b71736f459.jpg"
+											alt="Screenshot_20220813-113314.jpg" style="" /></p>
+
+									<p> </p>
+								</div>
+								<!--AfterDocument(88833908,81382819)-->
+
+								<div class="atc_buttons clearfix">
+									<div class="atc_buttons_etc"><span class="ink_bubble_wrap"><button
+												class="bt_report ib ib_monoC has_bubble" type="button"
+												onclick="inkPop('atc_report')"><i
+													class="fas fa-exclamation-triangle only"
+													title="신고"></i></button><span class="ink_bubble">신고</span></span>
+									</div>
+									<div class="atc_vote">
+										<button class="bt_vote vote_area" type="button"
+											onclick="insertWarn('로그인 해주세요.')">좋아요<span
+												class="voted_count text_en">12</span></button>
+									</div>
+								</div>
+
+							</div>
+
+							<div id="comment" class="cmt cmt_basic">
+								<div class="cmt_title has_cmt">
+									<h3>
+										댓글 <span class="pt_col text_en cmt_count">39</span> </h3>
+								</div>
+
+								<div class="cmt_write cmt_write_unit">
+									<span class="inkpf round"></span>
+									<form action="/" method="post" class="cmt_form"
+										onsubmit="return procFilter(this, insert_comment)" editor_sequence="6734"><input
+											type="hidden" name="error_return_url" value="/board005/6734"><input
+											type="hidden" name="act" value="">
+										<input type="hidden" name="member_nickname" value="ddsdf">
+										<input type="hidden" name="mid" value="board005">
+										<input type="hidden" name="document_srl" value="6734">
+										<input type="hidden" name="comment_srl" value="">
+										<input type="hidden" name="content" value="">
+										<div class="cmt_write_input text_ver">
+											<input type="hidden" name="use_html" value="Y">
+											<input type="hidden" id="htm_6734" value="n">
+											<textarea class="cmt_textarea" id="editor_6734" cols="50" rows="4"
+												placeholder="댓글 내용을 입력해주세요." style="width: 100%;"></textarea>
+											<script type="text/javascript">
+												editorStartTextarea(6734, "content", "comment_srl");
+											</script>
+										</div>
+
+										<div class="cmt_write_option">
+											<label class="ink_check unit"><input type="checkbox" name="is_secret"
+													value="Y"><span><i class="fas fa-check"></i></span>비밀</label><span
+												class="write_option"></span>
+											<div class="bt_area bt_right">
+												<button class="ib ib2 ib_color" type="submit">댓글 등록</button>
+											</div>
+										</div>
+										<input type="hidden" name="_rx_csrf_token" value="ZkTFaETAOAozFtzU">
+									</form>
+								</div>
+								<div class="cmt_wrap">
+									<div class="cmt_list">
+										<article class="cmt_unit" id="comment_277452">
+											<div class="inkpf_wrap">
+												<span class="inkpf round"></span>
+											</div>
+											<div class="cmt_header">
+												<a href="#popup_menu_area" class="nickname member_30674"
+													onclick="return false">로버트패틴슨</a> <span
+													class="cmt_date text_en font_grey1">22.08.28. 11:14 </span>
+												<div class="cmt_ctrl_wrap ctrl_wrap">
+													<div class="cmt_ctrl ctrl_body">
+														<a class="bt_edit" href="/write_edit.html">수정</a>
+														<a class="bt_edit bt" href="javascript:void(0)"
+															onclick="inkCmtDelete('ddsdf','7746',1)"><span
+																class="pt_col">삭제</span></a>
+													</div>
+												</div>
+											</div>
+											<div class="cmt_body">
+												<!--BeforeComment(277452,30674)-->
+												<div class="comment_277452_30674 rhymix_content xe_content">축하축하합니다!!
+												</div>
+												<!--AfterComment(277452,30674)-->
+												<div class="cmt_buttons">
+													<div class="bt_wrap">
+														<a class="bt bt_recomment" href="javascript:void(0)"
+															onclick="jQuery('#cmt_write_re').show(); return false;">
+															<i class="fas fa-comment-dots"></i> 댓글</a>
+													</div>
+													<div class="cmt_vote">
+														<div class="bt_wrap">
+															<button class="text_en bt bt_vote" type="button"
+																onclick="doCommentVote('277452','vote',0,0,this);return false;"
+																title="추천"><i class="far fa-thumbs-up"></i> <span
+																	class="voted_count">0</span></button>
+														</div>
+													</div>
+												</div>
+											</div><!-- //cmt_body -->
+											<div class="cmt_write_unit cmt_write_re" id="cmt_write_re">
+												<form action="/" method="post" class="cmt_form"
+													onsubmit="return procFilter(this, insert_comment)"
+													editor_sequence="2" style="height: auto;"><input type="hidden"
+														name="error_return_url" value="/7534"><input type="hidden"
+														name="act" value="">
+													<input type="hidden" name="member_nickname" value="ddsdf">
+													<input type="hidden" name="mid" value="board011">
+													<input type="hidden" name="document_srl" value="7534">
+													<input type="hidden" name="comment_srl" value="">
+													<input type="hidden" name="parent_srl" value="7743">
+													<input type="hidden" name="use_html" value="Y">
+													<input type="hidden" id="htm_2" value="n">
+													<span class="inkpf round"></span>
+													<div class="cmt_write_input text_ver">
+														<textarea class="cmt_textarea" name="content" id="editor_2"
+															placeholder="댓글 내용을 입력해주세요."
+															style="width: 100%;"></textarea>
+														<script type="text/javascript">
+															editorStartTextarea(2, "content", "comment_srl");
+														</script>
+													</div>
+													<div class="cmt_write_option">
+														<label class="ink_check unit"><input type="checkbox"
+																name="is_secret" value="Y"><span><i
+																	class="fas fa-check"></i></span>비밀</label><span
+															class="write_option"></span>
+														<div class="bt_area bt_right">
+															<button class="ib ib2 ib_mono bt_close" type="button"
+																onclick="jQuery('#cmt_write_re').hide();">취소</button>
+															<button class="ib ib2 ib_color" type="submit">댓글 등록</button>
+														</div>
+													</div>
+													<input type="hidden" name="_rx_csrf_token" value="RoLsuT3m6ii0FN8V">
+												</form>
+											</div>
+										</article>
+
+
+										<article class="cmt_unit" id="comment_277492">
+											<div class="inkpf_wrap">
+												<span class="inkpf round"></span>
+											</div>
+											<div class="cmt_header">
+												<a href="#popup_menu_area" class="nickname member_6069"
+													onclick="return false">듄매니아</a> <span
+													class="cmt_date text_en font_grey1">22.08.28. 11:21 </span>
+												<div class="cmt_ctrl_wrap ctrl_wrap">
+													<div class="cmt_ctrl ctrl_body">
+													</div>
+												</div>
+											</div>
+											<div class="cmt_body">
+												<!--BeforeComment(277492,6069)-->
+												<div class="comment_277492_6069 rhymix_content xe_content">와 넘이뿌네요
+													ㅎㅎㅎ축하드려요~~ 금손</div>
+												<!--AfterComment(277492,6069)-->
+												<div class="cmt_buttons">
+													<div class="bt_wrap">
+														<a class="bt" href="javascript:void(0)"
+															onclick="insertWarn('권한이 없습니다.')"><i
+																class="fas fa-comment-dots"></i>댓글</a>
+													</div>
+													<div class="cmt_vote">
+														<div class="bt_wrap">
+															<button class="text_en bt bt_vote" type="button"
+																onclick="doCommentVote('277492','vote',1,0,this);return false;"
+																title="추천"><i class="far fa-thumbs-up"></i> <span
+																	class="voted_count">+1</span></button>
+														</div>
+													</div>
+												</div>
+											</div><!-- //cmt_body -->
+										</article>
+										<article class="cmt_unit reply" id="comment_277499">
+											<div class="inkpf_wrap">
+												<span class="inkpf round"></span>
+											</div>
+											<div class="cmt_header">
+												<a href="#popup_menu_area" class="nickname member_6069"
+													onclick="return false">듄매니아</a> <span
+													class="cmt_date text_en font_grey1">22.08.28. 11:21 </span>
+												<div class="cmt_ctrl_wrap ctrl_wrap">
+													<div class="cmt_ctrl ctrl_body">
+													</div>
+												</div>
+											</div>
+											<div class="cmt_body">
+												<div class="parent"><i class="fas fa-comment-dots"></i> 듄매니아</div>
+												<!--BeforeComment(277499,6069)-->
+												<div class="comment_277499_6069 rhymix_content xe_content">아니 근데 1,2,3 다
+													이쁘네요 ㅎㅎㅎㅎㅎ &#x1f606;</div>
+												<!--AfterComment(277499,6069)-->
+												<div class="cmt_buttons">
+													<div class="bt_wrap">
+														<a class="bt" href="javascript:void(0)"
+															onclick="insertWarn('권한이 없습니다.')"><i
+																class="fas fa-comment-dots"></i>댓글</a>
+													</div>
+													<div class="cmt_vote">
+														<div class="bt_wrap">
+															<button class="text_en bt bt_vote" type="button"
+																onclick="doCommentVote('277499','vote',0,0,this);return false;"
+																title="추천"><i class="far fa-thumbs-up"></i> <span
+																	class="voted_count">0</span></button>
+														</div>
+													</div>
+												</div>
+											</div><!-- //cmt_body -->
+										</article>
+										<!-- //cmt_loop -->
+									</div><!-- //cmt_list -->
+								</div><!-- //cmt_wrap -->
+
+								<div class="ink_message ink_warn atc_delete">
+									<div>
+										<button class="bt_close bt_xclose" type="button"><svg viewBox="0 0 1024 1024">
+												<title>close</title>
+												<path class="path1"
+													d="M548.203 537.6l289.099-289.098c9.998-9.998 9.998-26.206 0-36.205-9.997-9.997-26.206-9.997-36.203 0l-289.099 289.099-289.098-289.099c-9.998-9.997-26.206-9.997-36.205 0-9.997 9.998-9.997 26.206 0 36.205l289.099 289.098-289.099 289.099c-9.997 9.997-9.997 26.206 0 36.203 5 4.998 11.55 7.498 18.102 7.498s13.102-2.499 18.102-7.499l289.098-289.098 289.099 289.099c4.998 4.998 11.549 7.498 18.101 7.498s13.102-2.499 18.101-7.499c9.998-9.997 9.998-26.206 0-36.203l-289.098-289.098z">
+												</path>
+											</svg></button>
+										<form class="inner">
+											<p class="message_text">이 글을 삭제하시겠습니까?</p>
+											<div class="bt_area bt_duo">
+												<button class="ib ib_mono bt_close" type="button">취소</button><button
+													class="ib ib_color" onclick="deleteSubmit(this);"
+													type="submit">확인</button>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="ink_message ink_warn cmt_delete">
+									<div>
+										<button class="bt_close bt_xclose" type="button"><svg viewBox="0 0 1024 1024">
+												<title>close</title>
+												<path class="path1"
+													d="M548.203 537.6l289.099-289.098c9.998-9.998 9.998-26.206 0-36.205-9.997-9.997-26.206-9.997-36.203 0l-289.099 289.099-289.098-289.099c-9.998-9.997-26.206-9.997-36.205 0-9.997 9.998-9.997 26.206 0 36.205l289.099 289.098-289.099 289.099c-9.997 9.997-9.997 26.206 0 36.203 5 4.998 11.55 7.498 18.102 7.498s13.102-2.499 18.102-7.499l289.098-289.098 289.099 289.099c4.998 4.998 11.549 7.498 18.101 7.498s13.102-2.499 18.101-7.499c9.998-9.997 9.998-26.206 0-36.203l-289.098-289.098z">
+												</path>
+											</svg></button>
+										<form class="inner">
+											<p class="message_text">이 댓글을 삭제하시겠습니까?</p>
+											<div class="bt_area bt_duo">
+												<button class="ib ib_mono bt_close" type="button">취소</button><button
+													class="ib ib_color" onclick="deleteSubmit(this);"
+													type="submit">확인</button>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="ink_message ink_warn atc_report">
+									<div>
+										<button class="bt_close bt_xclose" type="button"><svg viewBox="0 0 1024 1024">
+												<title>close</title>
+												<path class="path1"
+													d="M548.203 537.6l289.099-289.098c9.998-9.998 9.998-26.206 0-36.205-9.997-9.997-26.206-9.997-36.203 0l-289.099 289.099-289.098-289.099c-9.998-9.997-26.206-9.997-36.205 0-9.997 9.998-9.997 26.206 0 36.205l289.099 289.098-289.099 289.099c-9.997 9.997-9.997 26.206 0 36.203 5 4.998 11.55 7.498 18.102 7.498s13.102-2.499 18.102-7.499l289.098-289.098 289.099 289.099c4.998 4.998 11.549 7.498 18.101 7.498s13.102-2.499 18.101-7.499c9.998-9.997 9.998-26.206 0-36.203l-289.098-289.098z">
+												</path>
+											</svg></button>
+										<form class="inner">
+											<p class="message_text">이 글을 신고하시겠습니까?</p>
+											<div class="bt_area bt_duo">
+												<button class="ib ib_mono bt_close" type="button">취소</button><button
+													class="ib ib_color" onclick="deleteSubmit(this);"
+													type="submit">확인</button>
+											</div>
+										</form>
+									</div>
+								</div>
+
+							</div>
+
+
+							<!-- //cmt -->
+
+						</article>
+
+						<script>
+							//<![CDATA[
+							jQuery(function ($) {
+								$(document).ready(function () {
+									var atc = $("#content").find("article.ink_atc"),
+										cmt_write = $("#comment").find(">.cmt_write"),
+										cmt_offset = $("#comment").offset().top,
+										cmt_write_offset = cmt_write.offset().top;
+									atc.find(">header.atc_header").find("span.count_cmt").click(function () {
+										$('html, body').animate({ scrollTop: cmt_offset }, 300);
+										return false;
+									});
+									atc.find(">div.list_buttons").find("li.bt_comment").click(function () {
+										$('html, body').animate({ scrollTop: cmt_offset }, 300);
+										return false;
+									});
+									$("#comment").find("span.bt_cmt_write").click(function () {
+										$('html, body').animate({ scrollTop: cmt_write_offset }, 300);
+										cmt_write.find("textarea").focus();
+										return false;
+									});
+								});
+							});
+							function showHistory(button, target) {
+								var history = jQuery(button).parent().parent().parent(),
+									buttons = history.find("div.history_date"),
+									history_content = history.find("div.history_content"),
+									target = history.find("div." + target);
+
+								buttons.not(jQuery(button)).attr("class", "history_date closed");
+								jQuery(button).toggleClass("closed opened c_module2");
+								history_content.not(target).hide();
+								target.toggle();
+							}
+						</script>
+
+						<div class="list_header clearfix">
+						</div>
+
+						<div class="list_wrap">
+							<div class="ink_list ldn">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0"
+									summary="List of Articles">
+									<thead>
+										<!-- LIST HEADER -->
+										<tr>
+											<th class="no" scope="col">번호</th>
+											<th class="ctg_col">분류</th>
+											<th scope="col" class="title">제목</th>
+											<th scope="col">글쓴이</th>
+											<th class="date" scope="col">날짜</th>
+											<th class="extra_col" scope="col">조회 수</th>
+										</tr>
+										<!-- /LIST HEADER -->
+									</thead>
+									<tbody>
+										<!-- NOTICE -->
+										<tr class="notice">
+											<td class="notice_text no">공지 </td>
+											<td class="ctg_col"></td>
+											<td class="list_left list_title">
+												<a href="/board_detail.html" class="title_link">
+													<span style="font-weight:bold;color:#ff7f00">
+														&#x1f4a5;&#x1f4a5;무코 꿀기능 총정리&#x1f4a5;&#x1f4a5;</span>
+												</a>
+												<a class="cmt_num">90</a>
+											</td>
+
+											<td class="list_left list_author has_profile">
+												<span class="inkpf round"></span>
+												<a href="#popup_menu_area" class="member_4"
+													onclick="return false">admin</a>
+											</td>
+
+											<td class="text_en date">
+												<span class="msover_date">
+													<span class="ink_date">22.08.18.</span>
+													<span class="ink_time">00:04</span></span>
+											</td>
+
+											<td class="extra_col text_en"><span>4617</span></td>
+										</tr>
+
+										<tr class="notice">
+											<td class="notice_text no">공지 </td>
+											<td class="ctg_col"></td>
+											<td class="list_left list_title">
+												<a href="/board_detail.html" class="title_link">
+													<span style="font-weight:bold;color:#ff7f00">
+														&#x1f4a5;&#x1f4a5;무코 꿀기능 총정리&#x1f4a5;&#x1f4a5;</span>
+												</a>
+												<a class="cmt_num">90</a>
+											</td>
+
+											<td class="list_left list_author has_profile">
+												<span class="inkpf round"></span>
+												<a href="#popup_menu_area" class="member_4"
+													onclick="return false">admin</a>
+											</td>
+
+											<td class="text_en date">
+												<span class="msover_date">
+													<span class="ink_date">22.08.18.</span>
+													<span class="ink_time">00:04</span></span>
+											</td>
+
+											<td class="extra_col text_en"><span>4617</span></td>
+										</tr>
+										<!-- /NOTICE -->
+
+										<!-- LIST -->
+										<tr>
+											<td class="no text_en">2502 </td>
+											<td class="ctg_col">
+												<a href="/board.html" class="list_ctg">극장정보</a>
+											</td>
+
+											<td class="list_left list_title">
+												<div class="article_type">
+													<span class="list_icon2 image">image</span>
+												</div>
+
+												<div class="title_area">
+													<a href="/board_detail.html" class="title_link">
+														vip 인센티브 무료쿠폰 소름이네요... </a>
+													<a class="cmt_num updated">13</a>
+													<span class="list_icon new">N</span>
+												</div>
+											</td>
+
+											<td class="list_left list_author has_profile">
+												<span class="inkpf round">
+													<img class="inkpf_img"
+														src="/files/member_extra_info/profile_image/893/006/6893.jpg?20220815175753"
+														alt="비리부정부패독재타도" /></span>
+												<a href="#popup_menu_area" class="member_4"
+													onclick="return false">비리부정부패독재타도</a>
+											</td>
+
+											<td class="date text_en"><span class="msover_date"><span
+														class="ink_date">18시간 전</span>
+													<span class="ink_time">15:28</span></span>
+											</td>
+											<td class="extra_col text_en"><span>1421</span></td>
+										</tr>
+										<tr>
+											<td class="no text_en">2502 </td>
+											<td class="ctg_col">
+												<a href="/board.html" class="list_ctg">극장정보</a>
+											</td>
+
+											<td class="list_left list_title">
+												<div class="article_type">
+													<span class="list_icon2 image">image</span>
+												</div>
+
+												<div class="title_area">
+													<a href="/board_detail.html" class="title_link">
+														vip 인센티브 무료쿠폰 소름이네요... </a>
+													<a class="cmt_num updated">13</a>
+													<span class="list_icon new">N</span>
+												</div>
+											</td>
+
+											<td class="list_left list_author has_profile">
+												<span class="inkpf round">
+													<img class="inkpf_img"
+														src="/files/member_extra_info/profile_image/893/006/6893.jpg?20220815175753"
+														alt="비리부정부패독재타도" /></span>
+												<a class="member_6893">비리부정부패독재타도</a>
+											</td>
+
+											<td class="date text_en"><span class="msover_date"><span
+														class="ink_date">18시간 전</span>
+													<span class="ink_time">15:28</span></span>
+											</td>
+											<td class="extra_col text_en"><span>1421</span></td>
+										</tr>
+										<!-- //LIST -->
+									</tbody>
+								</table>
+							</div>
+							<div class="list_footer">
+								<div class="bt_area bt_left clearfix">
+									<span class="ink_bubble_wrap">
+										<button class="ib ib2 ib_mono2 has_bubble" type="button"
+											onclick="inkPop('list_search')">
+											<i class="fas fa-search only" title="검색"></i></button><span
+											class="ink_bubble">검색</span></span>
+									<a class="ib ib2 ib_color bt_write" href="/write.html">
+										<i class="fas fa-pen"></i>
+										<span>쓰기</span>
+									</a>
+								</div>
+
+								<div class="paging text_en font_grey1">
+									<span class="bt_page">
+										<a class="bt_prev" href="#" title="prev">
+											<i class="fas fa-angle-left"></i></a></span>
+									<div class="page_num_wrap">
+										<span class="bt_page"><a class="page_num active">1</a></span>
+										<span class="bt_page"><a href="#" class="page_num">2</a></span>
+									</div>
+
+									<span class="bt_page"><a class="bt_prev bt_next" href="#" title="next">
+											<i class="fas fa-angle-right"></i></a></span>
+									<span class="ink_bubble_wrap bt_page">
+										<a class="bt_last has_bubble" href="#" title="끝 페이지">
+											<i class="fas fa-angle-double-right"></i></a><span class="ink_bubble">끝
+											페이지</span></span>
+								</div>
+							</div>
+						</div>
+						<div class="ink_message ink_message2 list_search">
+							<div>
+								<h3>검색</h3>
+								<button class="bt_close bt_xclose" type="button"><svg viewBox="0 0 1024 1024">
+										<title>close</title>
+										<path class="path1"
+											d="M548.203 537.6l289.099-289.098c9.998-9.998 9.998-26.206 0-36.205-9.997-9.997-26.206-9.997-36.203 0l-289.099 289.099-289.098-289.099c-9.998-9.997-26.206-9.997-36.205 0-9.997 9.998-9.997 26.206 0 36.205l289.099 289.098-289.099 289.099c-9.997 9.997-9.997 26.206 0 36.203 5 4.998 11.55 7.498 18.102 7.498s13.102-2.499 18.102-7.499l289.098-289.098 289.099 289.099c4.998 4.998 11.549 7.498 18.101 7.498s13.102-2.499 18.101-7.499c9.998-9.997 9.998-26.206 0-36.203l-289.098-289.098z">
+										</path>
+									</svg></button>
+								<form action="#" method="get" onsubmit="return procFilter(this, search)"
+									name="list_search"><input type="hidden" name="act" value="" />
+									<div class="inner">
+										<input type="hidden" name="vid" value="" />
+										<input type="hidden" name="mid" value="hot" />
+										<input type="hidden" name="category" value="" />
+										<div>
+											<select name="search_target" class="ink_custom_select">
+												<option value="title_content">제목+내용</option>
+												<option value="title">제목</option>
+												<option value="content">내용</option>
+												<option value="comment">댓글</option>
+												<option value="nick_name">닉네임</option>
+												<option value="tag">태그</option>
+											</select>
+										</div><input class="ii focused" type="text" name="search_keyword" value=""
+											title="검색" placeholder="검색어를 입력하세요." />
+									</div>
+									<div class="bt_area bt_duo">
+										<button class="ib ib_mono bt_close" type="button">취소</button><button
+											class="ib ib_color" type="submit">검색</a>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<div class="ink_align_center"></div>
+					</section>
+				</div>
+			</div>
+		</div>
+		<div class="ink_footer_wrap">
+			<footer class="ink_footer">
+				<div class="logo_bottom">
+					<a href="#" rel="home">
+						<img src="/logo.png" style="height: 70px;" alt="무비로그" /></a>
+				</div>
+
+				<div class="footer_content">
+					<div class="footer_1st footer_table">
+						<div class="ink_copyright text_en footer_cell">Copyright©
+							<a href="/main.html">무비로그</a> All rights reserved.
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<button class="ink_bt_top"><i class="fas fa-angle-up"></i></button>
+	<div class="ink_message ink_message2 ink_login2">
+		<div>
+			<h3>로그인</h3>
+			<button class="bt_close bt_xclose" type="button"><svg viewBox="0 0 1024 1024">
+					<title>close</title>
+					<path class="path1"
+						d="M548.203 537.6l289.099-289.098c9.998-9.998 9.998-26.206 0-36.205-9.997-9.997-26.206-9.997-36.203 0l-289.099 289.099-289.098-289.099c-9.998-9.997-26.206-9.997-36.205 0-9.997 9.998-9.997 26.206 0 36.205l289.099 289.098-289.099 289.099c-9.997 9.997-9.997 26.206 0 36.203 5 4.998 11.55 7.498 18.102 7.498s13.102-2.499 18.102-7.499l289.098-289.098 289.099 289.099c4.998 4.998 11.549 7.498 18.101 7.498s13.102-2.499 18.101-7.499c9.998-9.997 9.998-26.206 0-36.203l-289.098-289.098z">
+					</path>
+				</svg></button>
+			<form action="/" method="post" name="memberLogin"><input type="hidden" name="error_return_url"
+					value="/movietalk/88833908?category=78887301" /><input type="hidden" name="mid"
+					value="movietalk" /><input type="hidden" name="ruleset" value="@login" />
+				<input type="hidden" name="success_return_url" value="/movietalk/88833908?category=78887301" />
+				<input type="hidden" name="act" value="procMemberLogin" />
+				<div class="inner">
+					<input class="ii focused" name="user_id" type="text" placeholder="아이디" required /> <input class="ii"
+						name="password" type="password" placeholder="비밀번호" required />
+					<div class="ex clearfix">
+						<label class="ink_check"><input type="checkbox" class="keep_signed" name="keep_signed"
+								value="Y" /><span><i class="fas fa-check"></i></span>로그인 유지</label>
+						<div class="keep_desc bg_grey1">브라우저를 닫더라도 로그인이 계속 유지될 수 있습니다. 로그인 유지 기능을 사용할 경우 다음 접속부터는
+							로그인할 필요가 없습니다. 단, PC방, 학교, 도서관 등 공공장소에서 이용 시 개인정보가 유출될 수 있으니 꼭 로그아웃을 해주세요.</div> <a
+							href="/movietalk/dispMemberFindAccount?category=78887301&amp;document_srl=88833908"
+							class="a_underline">ID/PW 찾기</a>
+					</div>
+				</div>
+				<div class="bt_area bt_half">
+					<button class="ib ib_mono" type="button"
+						onclick=javascript:location.href="/home/signup">회원가입</button><button
+						class="ib ib_color bt_login" type="submit">로그인</button>
+				</div>
+			</form>
+
+			<button class="btn--kakao">
+				<svg data-v-22597430="" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"
+					class="kakao__icon">
+					<path data-v-22597430=""
+						d="M11.998 4c-5.387 0-9.753 3.443-9.753 7.69 0 2.746 1.826 5.158 4.572 6.516-.15.515-.96 3.314-.992 3.535 0 0-.02.165.087.227a.295.295 0 00.232.015c.308-.044 3.564-2.327 4.127-2.72.572.08 1.15.118 1.727.117 5.387 0 9.754-3.443 9.754-7.69S17.384 4 11.998 4z"
+						fill="#000" fill-opacity=".9"></path>
+				</svg>
+				카카오로 1초 만에 시작하기
+			</button>
+		</div>
+	</div>
+	<div id="ink_dummy" class="ink_dummy"></div>
+	</div>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-3938866-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-3938866-1');
+	</script>
+	<!-- BODY JS -->
+
+	<script src="/js/autolink.js"></script>
+
+
+</body>
+
+</html>

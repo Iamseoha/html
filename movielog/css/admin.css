@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap');
+
+body {
+	font-family: RobotoInCjk, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Malgun Gothic', sans-serif !important;
+}
+
+.feather {
+	width: 16px;
+	height: 16px;
+	vertical-align: text-bottom;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+	position: fixed;
+	top: 0;
+	/* rtl:raw:
+  right: 0;
+  */
+	bottom: 0;
+	/* rtl:remove */
+	left: 0;
+	z-index: 100; /* Behind the navbar */
+	padding: 108px 30px 0; /* Height of navbar */
+}
+
+@media (max-width: 767.98px) {
+	.sidebar {
+		top: 5rem;
+	}
+}
+
+.sidebar-sticky {
+	position: relative;
+	top: 0;
+	height: calc(100vh - 48px);
+	padding-top: 0.5rem;
+	overflow-x: hidden;
+	overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.click {
+	color: white !important;
+}
+
+.sidebar .nav-link {
+	font-weight: 600;
+	color: #262626;
+	font-size: 23px;
+}
+
+.nav-link:hover {
+	color: #acacac;
+}
+
+.sidebar-heading {
+	font-size: 0.75rem;
+	text-transform: uppercase;
+}
+
+/*
+ * Navbar
+ */
+
+.navbar-brand {
+	padding-top: 20px;
+	font-size: 35px;
+	height: 90px !important;
+	font-weight: 900;
+	margin-left: 40px;
+}
+
+.navbar .navbar-toggler {
+	top: 0.25rem;
+	right: 1rem;
+}
+
+.navbar .form-control {
+	padding: 0.75rem 1rem;
+	border-width: 0;
+	border-radius: 0;
+}
+
+.form-control-dark {
+	color: #fff;
+	border-color: rgba(255, 255, 255, 0.1);
+}
+
+table {
+	margin-top: 20px;
+}
+
+thead,
+tbody {
+	background-color: #ffffff;
+	color: #4b4b4b;
+	text-align: center;
+}
+
+.btn {
+	background-color: #e6e6e6 !important;
+	color: #262626;
+	border: none;
+	font-size: 15px;
+}
+
+.btn:hover {
+	background-color: rgba(255, 255, 255, 0.25);
+	color: rgb(167, 167, 167);
+}
+
+.btn:focus,
+.btn:active {
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+.page-link {
+	border: none;
+	color: #262626;
+	font-size: 20px;
+}
+
+.page-link:hover {
+	color: #acacac;
+	background-color: rgba(255, 255, 255, 0.25);
+}
+
+.page-link:focus,
+.page-link:active {
+	outline: none !important;
+	box-shadow: none !important;
+	background-color: rgba(255, 255, 255, 0.25);
+	color: #acacac;
+}
